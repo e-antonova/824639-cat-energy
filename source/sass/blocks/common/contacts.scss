@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: $grey;
+}
+
+.contacts__title,
+.contacts__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  line-height: 20px;
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.contacts__text {
+  font-family: $arial;
+  font-size: 14px;
+}

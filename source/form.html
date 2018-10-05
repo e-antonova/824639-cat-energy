@@ -3,31 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи - Подбор программы</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo logo" href="index.html">
         <img class="logo__img logo__img--icon" src="http://placehold.it/33x38" width="33" height="38" alt="Кэт энерджи">
         <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle button" type="button"></button>
+        <div class="main-nav__wrapper container">
+          <button class="main-nav__toggle" type="button"></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
+              <a>Главная</a>
             </li>
             <li class="site-list__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a>Подбор программы</a>
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
+        </div>
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="page-main container">
       <h1 class="visually-hidden">«Кэт энерджи» – подбор программы питания</h1>
       <form class="form-program" action="http://echo.htmlacademy.ru" method="post">
         <div class="form-program__header">
@@ -53,15 +56,15 @@
           <ul class="personal-info__programs">
             <li class="personal-info__selection">
               <input class="personal-info__btn" type="radio" name="Программа" id="slim" value="Похудение" checked>
-              <label class="personal-info__label" for="slim">Похудение</label>
+              <label class="personal-info__label personal-info__label--radio" for="slim">Похудение</label>
             </li>
             <li class="personal-info__selection">
               <input class="personal-info__btn" type="radio" name="Программа" id="grow" value="Набор массы">
-              <label class="personal-info__label" for="grow">Набор массы</label>
+              <label class="personal-info__label personal-info__label--radio" for="grow">Набор массы</label>
             </li>
             <li class="personal-info__selection">
               <input class="personal-info__btn" type="radio" name="Программа" id="advice" value="Не знаю (Нужен ваш совет)">
-              <label class="personal-info__label" for="advice">Не знаю (Нужен ваш совет)</label>
+              <label class="personal-info__label personal-info__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
           <h3 class="personal-info__title form__title">Контактные данные (владельца кота)</h3>
@@ -73,37 +76,31 @@
             <label class="personal-info__label" for="tel">Телефон:*</label>
             <input class="personal-info__input" type="tel" name="Телефон" id="tel" placeholder="8 (960) 900-60-90" required>
           </div>
-        </section>
-        <section class="comment-area">
-          <div class="comment-area__wrapper">
-            <h3 class="comment-area__title form__title">Комментарий</h3>
-            <label class="comment-area__label">
-              <textarea class="comment-area__input" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="personal-info__programs__comment comment">
+            <h3 class="personal-info__title form__title">Комментарий</h3>
+            <label class="personal-info__label">
+              <textarea class="personal-info__input comment--input" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
-        </section>
-        <section class="extra">
-          <div class="extra__wrapper">
-            <h3 class="extra__title form__title">Дополнительно</h3>
-            <ul class="extra__list extra__list--checks">
-              <li class="extra__item">
-                <input class="extra__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="extra__label" for="sweetener">Сахарозаменитель</label>
-              </li>
-              <li class="extra__item">
-                <input class="extra__checkbox" type="checkbox" name="water" id="water">
-                <label class="extra__label" for="water">Питьевая вода</label>
-              </li>
-              <li class="extra__item">
-                <input class="extra__checkbox" type="checkbox" name="milk" id="milk">
-                <label class="extra__label" for="milk">Молоко</label>
-              </li>
-              <li class="extra__item">
-                <input class="extra__checkbox" type="checkbox" name="vitamins" id="vitamins">
-                <label class="extra__label" for="vitamins">Витамины</label>
-              </li>
-            </ul>
-          </div>
+          <h3 class="personal-info__title form__title">Дополнительно</h3>
+          <ul class="personal-info__programs extra">
+            <li class="extra__item">
+              <input class="extra__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+              <label class="personal-info__label extra__label" for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="extra__item">
+              <input class="extra__checkbox" type="checkbox" name="water" id="water">
+              <label class="personal-info__label extra__label" for="water">Питьевая вода</label>
+            </li>
+            <li class="extra__item">
+              <input class="extra__checkbox" type="checkbox" name="milk" id="milk">
+              <label class="personal-info__label extra__label" for="milk">Молоко</label>
+            </li>
+            <li class="extra__item">
+              <input class="extra__checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <label class="personal-info__label extra__label" for="vitamins">Витамины</label>
+            </li>
+          </ul>
         </section>
         <div class="form-program__footer">
           <input class="form-program__btn button" type="submit" value="Отправить заявку">
@@ -112,39 +109,37 @@
       </form>
     </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
-          <p class="contacts__text">
-            ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
-          </p>
-          <div class="contacts__map map">
-            <img class="map__img" src="http://placehold.it/1345x645" width="1345" height="645" alt="Как нас найти">
-          </div>
-        </div>
-        <a class="page-footer__logo logo" href="index.html">
-          <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
+    <footer class="page-footer container">
+      <div class="page-footer__contacts contacts">
+        <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
+        <p class="contacts__text">
+          ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
+        </p>
+      </div>
+      <div class="page-footer__map map">
+        <img class="map__img" src="http://placehold.it/" width="320" height="364" alt="Как нас найти">
+      </div>
+      <a class="page-footer__logo logo container" href="#">
+        <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru">
+          <img class="copyright__logo-academy" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
         </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Instagram</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Facebook</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru">
-            <img class="copyright__logo-academy" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
-          </a>
-        </div>
       </div>
     </footer>
   </body>

@@ -3,33 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи - Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo logo" href="index.html">
         <img class="logo__img logo__img--icon" src="http://placehold.it/33x38" width="33" height="38" alt="Кэт энерджи">
         <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle button" type="button"></button>
+        <div class="main-nav__wrapper container">
+          <button class="main-nav__toggle" type="button"></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
+              <a>Главная</a>
             </li>
             <li class="site-list__item">
-              <a>Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
+        </div>
       </nav>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Каталог «Кэт энерджи»</h1>
-      <section class="catalog">
+      <section class="catalog container">
         <h2 class="catalog__title main__title">Каталог продукции</h2>
           <article class="catalog__item">
             <img class="catalog__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy PRO с курицей 500 г">
@@ -186,7 +189,7 @@
             <a class="catalog__btn button button--show-more" href="#">Показать все</a>
           </article>
       </section>
-      <section class="additional-products">
+      <section class="additional-products container">
         <div class="additional-products__wrapper">
           <h2 class="additional-products__title form__title">Дополнительные товары</h2>
           <ul class="additional-products__list">
@@ -223,7 +226,7 @@
               <a class="additional-products__btn button" href="#">Заказать</a>
             </li>
           </ul>
-          <div class="additional-products__promo">
+          <div class="additional-products__promo container">
             <p class="additional-products__description">
               Закажите все  и получите чехол для кота в подарок!
             </p>
@@ -232,40 +235,38 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
-          <p class="contacts__text">
-            ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
-          </p>
-          <div class="contacts__map map">
-            <img class="map__img" src="http://placehold.it/1345x645" width="1345" height="645" alt="Как нас найти">
-          </div>
-        </div>
-        <a class="page-footer__logo logo" href="index.html">
-          <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
-        </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Instagram</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Facebook</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru">
-            <img class="copyright__logo-academy" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
-          </a>
-        </div>
+    <footer class="page-footer container">
+      <div class="page-footer__contacts contacts">
+        <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
+        <p class="contacts__text">
+          ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
+        </p>
       </div>
-      </footer>
-    </body>
-  </html>
+      <div class="page-footer__map map">
+        <img class="map__img" src="http://placehold.it/" width="320" height="364" alt="Как нас найти">
+      </div>
+      <a class="page-footer__logo logo container" href="#">
+        <img class="logo__img logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru">
+          <img class="copyright__logo-academy" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
