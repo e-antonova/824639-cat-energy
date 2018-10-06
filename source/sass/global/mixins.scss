@@ -1,4 +1,4 @@
-.container {
+@mixin wrapper {
   margin: 0 auto;
   padding: 0 20px;
   min-width: 320px;
