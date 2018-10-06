@@ -1,0 +1,35 @@
+.additional-products {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px;
+}
+
+.additional-products__title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.additional-products__list {
+  list-style-type: none;
+}
+
+.additional-products__item {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.additional-products__name {
+  margin: 13px 0;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-products__details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 13px;
+  color: $darkgrey;
+}

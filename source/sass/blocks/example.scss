@@ -1,0 +1,35 @@
+.example {
+  position: relative;
+  background-color: $grey;
+}
+
+.example__title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.example__description {
+  padding-right: 15px;
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.example__item {
+  display: block;
+  padding: 13px 0 15px 0;
+}
+
+.example__conclusion {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}

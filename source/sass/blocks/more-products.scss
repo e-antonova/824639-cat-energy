@@ -1,0 +1,24 @@
+.more-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.more-products__title {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.more-products__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.button--show-more {
+  background-color: #f2f2f2;
+  color: $darkgrey;
+}

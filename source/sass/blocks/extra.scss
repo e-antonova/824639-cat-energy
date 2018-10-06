@@ -1,0 +1,16 @@
+.extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  outline: none;
+}
+
+.extra__item {
+  padding-bottom: 20px;
+}
+
+.extra__label {
+  align-self: center;
+  margin-left: 15px;
+}

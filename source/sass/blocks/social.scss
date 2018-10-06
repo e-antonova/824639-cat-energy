@@ -1,0 +1,19 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.socials__item {
+  margin: 0 18px;
+  width: 21px;
+}
+
+.socials__link {
+  display: inline-block;
+  font-size: 0;
+  text-decoration: none;
+}
