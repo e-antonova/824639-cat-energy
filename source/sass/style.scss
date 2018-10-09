@@ -1,8 +1,8 @@
 @import "global/normalize";
 @import "global/variables";
+@import "global/mixins";
 @import "global/fonts";
 @import "global/global";
-@import "global/mixins";
 @import "blocks/page-header";
 @import "blocks/logo";
 @import "blocks/page-main";
@@ -10,6 +10,7 @@
 @import "blocks/site-list";
 @import "blocks/preview";
 @import "blocks/button";
+@import "blocks/categories";
 @import "blocks/advantages";
 @import "blocks/example";
 @import "blocks/page-footer";
@@ -17,8 +18,9 @@
 @import "blocks/social";
 @import "blocks/copyright";
 @import "blocks/map";
+@import "blocks/catalog";
 @import "blocks/product";
 @import "blocks/additional-products";
 @import "blocks/more-products";
-@import "blocks/comment";
-@import "blocks/extra";
+@import "blocks/form-program";
+@import "blocks/personal-info";

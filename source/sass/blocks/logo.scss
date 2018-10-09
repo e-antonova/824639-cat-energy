@@ -1,6 +1,8 @@
 .logo {
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo__img--icon {
@@ -9,6 +11,7 @@
 }
 
 .logo__img--text {
-  position: absolute;
   margin: auto;
+  width: 101px;
+  height: 18px;
 }

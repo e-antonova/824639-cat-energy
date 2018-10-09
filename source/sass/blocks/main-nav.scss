@@ -1,5 +1,6 @@
-.main-nav {
-  border-top: 1px solid #e6e6e6;
+.main-nav__wrapper {
+  @include wrapper;
+  width: auto;
 }
 
 .main-nav__toggle {

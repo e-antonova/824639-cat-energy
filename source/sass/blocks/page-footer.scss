@@ -1,4 +1,30 @@
+.page-footer__wrapper {
+  @include wrapper;
+}
+
 .page-footer {
-  position: relative;
+  width: 100%;
+
   background-color: $grey;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: auto;
+    padding-top: 52px;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  margin: 20px auto;
 }

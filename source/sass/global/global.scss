@@ -1,18 +1,36 @@
 html,
 body {
-  font-family: $oswald;
-  font-size: 16px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
   font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
+  font-family: $oswald;
+  color: $black;
+
+  background-color: $bg-color;
 }
 
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }

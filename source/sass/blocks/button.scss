@@ -2,14 +2,16 @@
   display: block;
   width: 100%;
   padding: 10px 20px;
-  font-family: $oswald;
+
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
+  font-family: $oswald;
   text-align: center;
-  text-decoration: none;
-  color: #ffffff;
+  text-transform: uppercase;
+  color: $bg-color;
+
   background-color: $green;
   border: none;
+  text-decoration: none;
   box-sizing: border-box;
 }
