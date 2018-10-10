@@ -1,0 +1,105 @@
+.personal-info {
+  @include wrapper;
+}
+
+@media (min-width: $tablet-width) {
+  .personal-info {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .personal-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1220px;
+  }
+}
+
+.personal-info__row {
+  display: flex;
+  margin: 14px 0;
+}
+
+.personal-info__label,
+.personal-info__input,
+.personal-info__input::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $oswald;
+  text-transform: uppercase;
+}
+
+.personal-info__label {
+  align-self: center;
+  margin-right: 15px;
+}
+
+.personal-info__input {
+  flex-grow: 1;
+  padding: 13px;
+  height: 45px;
+
+  color: $darkgrey;
+
+  border: 1px solid $border-grey;
+  box-sizing: border-box;
+}
+
+.personal-info__programs {
+  margin: 0 -20px;
+  padding: 9px 20px;
+
+  @include reset-list;
+  outline: 1px solid $border-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .personal-info__programs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 708px;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .personal-info__programs {
+    display: flex;
+    flex-grow: 1;
+    width: 1220px;
+  }
+}
+
+.personal-info__label--radio {
+  margin-left: 15px;
+}
+
+.personal-info__selection {
+  margin: 12px 0;
+}
+
+.personal-info__title {
+  @include form-title;
+}
+
+.personal-info__input--text {
+  height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.personal-info__programs:last-child {
+  outline: none;
+}
+
+.personal-info__checkbox {
+  margin-bottom: 14px;
+}
+
+.personal-info__label--checkbox {
+  align-self: center;
+  margin-left: 15px;
+}

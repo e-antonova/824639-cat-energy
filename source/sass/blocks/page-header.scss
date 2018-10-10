@@ -1,4 +1,13 @@
 .page-header {
   position: relative;
-  background-color: #ffffff;
+}
+
+.page-header__logo {
+  height: 66px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 80px;
+  }
 }
