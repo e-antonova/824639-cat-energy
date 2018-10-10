@@ -5,7 +5,6 @@
 .preview {
   display: flex;
   align-items: center;
-  width: 320px;
   min-height: 480px;
   margin-bottom: 22px;
 
@@ -18,12 +17,14 @@
 
 @media (min-width: $tablet-width) {
   .preview {
+    @include wrapper-tablet;
     width: 620px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .preview {
+    @include wrapper-desktop;
     width: 720px;
   }
 }

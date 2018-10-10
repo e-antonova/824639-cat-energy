@@ -4,6 +4,7 @@
 
 @media (min-width: $desktop-width) {
   .categories__wrapper {
+    @include wrapper-desktop;
     display: flex;
     margin-top: 40px;
     padding: 0;
@@ -21,6 +22,7 @@
 
 @media (min-width: $tablet-width) {
   .categories__item {
+    @include wrapper-tablet;
     width: auto;
   }
 }

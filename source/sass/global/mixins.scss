@@ -25,3 +25,14 @@
   line-height: 24px;
   font-family: $oswald;
 }
+
+@mixin wrapper-tablet {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+
+@mixin wrapper-desktop {
+  padding: 0 110px;
+  box-sizing: border-box;
+}

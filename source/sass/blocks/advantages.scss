@@ -12,6 +12,7 @@
 
 @media (min-width: $tablet-width) {
   .advantages__list {
+    @include wrapper-tablet;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -20,6 +21,7 @@
 
 @media (min-width: $desktop-width) {
   .advantages__list {
+    @include wrapper-desktop;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -29,7 +31,6 @@
 .advantages__item {
   display: flex;
   flex-direction: column;
-  width: 320px;
   margin-bottom: 20px;
 }
 

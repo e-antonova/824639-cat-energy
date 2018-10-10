@@ -4,12 +4,14 @@
 
 @media (min-width: $tablet-width) {
   .personal-info {
+    @include wrapper-tablet;
     width: 708px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .personal-info {
+    @include wrapper-desktop;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -57,6 +59,7 @@
 
 @media (min-width: $tablet-width) {
   .personal-info__programs {
+    @include wrapper-tablet;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -67,6 +70,7 @@
 
 @media (min-width: $desktop-width) {
   .personal-info__programs {
+    @include wrapper-desktop;
     display: flex;
     flex-grow: 1;
     width: 1220px;

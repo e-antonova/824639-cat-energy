@@ -3,7 +3,6 @@
 }
 
 .example {
-  width: 320px;
   min-height: 705px;
 
   background-color: $grey;
@@ -11,6 +10,7 @@
 
 @media (min-width: $tablet-width) {
   .example {
+    @include wrapper-tablet;
     width: auto;
 
     background-color: #ffffff;
@@ -19,6 +19,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
+    @include wrapper-desktop;
     padding-right: 0;
     display: flex;
     justify-content: space-between;
