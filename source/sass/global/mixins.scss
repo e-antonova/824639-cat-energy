@@ -1,6 +1,16 @@
 @mixin wrapper {
   padding: 0 20px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    @media (min-width: $desktop-width) {
+      padding: 0 110px;
+      box-sizing: border-box;
+    }
+  }
 }
 
 @mixin reset-list {
@@ -24,15 +34,4 @@
   font-size: 24px;
   line-height: 24px;
   font-family: $oswald;
-}
-
-@mixin wrapper-tablet {
-  padding: 0 30px;
-  box-sizing: border-box;
-}
-
-
-@mixin wrapper-desktop {
-  padding: 0 110px;
-  box-sizing: border-box;
 }

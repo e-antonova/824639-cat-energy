@@ -13,7 +13,6 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
-    @include wrapper-tablet;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -23,7 +22,6 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    @include wrapper-desktop;
     display: flex;
     width: 1220px;
   }
@@ -41,7 +39,6 @@
 
 @media (min-width: $tablet-width) {
   .catalog__item {
-    @include wrapper-tablet;
     width: 324px;
 
     border-top: none;
@@ -52,7 +49,6 @@
 
 @media (min-width: $desktop-width) {
   .catalog__item {
-    @include wrapper-desktop;
     margin-right: 40px;
     width: 245px;
 

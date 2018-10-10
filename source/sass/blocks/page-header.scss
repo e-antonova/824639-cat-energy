@@ -8,7 +8,6 @@
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
-    @include wrapper-desktop;
     height: 80px;
   }
 }

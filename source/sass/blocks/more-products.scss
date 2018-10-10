@@ -4,14 +4,12 @@
 
 @media (min-width: $tablet-width) {
   .more-products {
-    @include wrapper-tablet;
     width: 324px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .more-products {
-    @include wrapper-desktop;
     width: 245px;
   }
 }

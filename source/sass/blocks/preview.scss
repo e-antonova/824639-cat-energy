@@ -17,14 +17,12 @@
 
 @media (min-width: $tablet-width) {
   .preview {
-    @include wrapper-tablet;
     width: 620px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .preview {
-    @include wrapper-desktop;
     width: 720px;
   }
 }

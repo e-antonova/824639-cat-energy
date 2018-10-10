@@ -10,7 +10,6 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    @include wrapper-tablet;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -20,7 +19,6 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    @include wrapper-desktop;
     width: auto;
     padding-top: 52px;
   }

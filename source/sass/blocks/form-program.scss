@@ -20,7 +20,6 @@
 
 @media (min-width: $tablet-width) {
   .form-program__footer {
-    @include wrapper-tablet;
     display: flex;
     align-items: center;
     padding-top: 30px;

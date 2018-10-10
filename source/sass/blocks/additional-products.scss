@@ -17,7 +17,6 @@
 
 @media (min-width: $tablet-width) {
   .additional-products__list {
-    @include wrapper-tablet;
     padding-bottom: 75px;
   }
 }
