@@ -2,12 +2,157 @@
   position: relative;
 }
 
-.page-header__logo {
-  height: 66px;
+.page-header__logo-image {
+  display: block;
+  width: 192px;
+  height: 38px;
+  padding: 13px 0 12px 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  display: block;
+  width: 24px;
+  height: 18px;
+
+  background-color: $bg-color;
+
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: $bg-color;
+  }
+}
+
+.page-header--closed .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: $bg-color;
+  box-shadow: 0 6px 0 0 $black, 0 12px 0 0 $black, 0 18px 0 0 $black;
+}
+
+.page-header--closed .page-header__toggle:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 18px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.page-header--opened .page-header__toggle {
+  top: 0;
+  right: 0;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 31px;
+    right: 20px;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.page-header--preview::after {
+  content: "";
+  position: absolute;
+  right: 0;
+
+  display: block;
+  width: 100%;
+  min-height: 305px;
+
+  background:
+    linear-gradient(to top, $bg-color 97px, transparent 97px),
+    linear-gradient(to top, $bg-color 197px, #61a63c 197px);
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__logo-image {
+    width: 100%;
+    height: 58px;
+    padding: 24px 0 0 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+    overflow: hidden;
+  }
+
+  .page-header--preview::after {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
-    height: 80px;
+    width: auto;
+    height: 62px;
+    padding: 54px 0 0 60px;
+  }
+
+  .page-header__toggle {
+    display: none;
+    overflow: hidden;
+  }
+
+  .page-header--preview::after {
+    top: 0;
+
+    display: block;
+    width: 50%;
+    min-height: 696px;
+
+    background: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

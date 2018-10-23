@@ -1,4 +1,33 @@
-.contacts__map {
-  display: flex;
-  background-color: $bg-color;
+.map {
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #fbf5e3;
+  width: 100%;
+  height: 362px;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #fbf5e3;
+    width: 100%;
+    height: 395px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #fbf5e3;
+    width: 100%;
+    height: 399px;
+  }
 }
