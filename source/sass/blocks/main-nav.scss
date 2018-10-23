@@ -1,10 +1,52 @@
 .main-nav__wrapper {
-  @include wrapper;
   width: auto;
 }
 
-.main-nav__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+.main-nav {
+  min-height: 198px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 100%;
+    min-height: 90px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .main-nav__list,
+  .main-nav__wrapper {
+    display: flex;
+  }
+
+  .main-nav__wrapper {
+    min-width: 440px;
+    margin-top: 41px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-width: 440px;
+
+    border: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    z-index: 100;
+    width: 47%;
+  }
+
+  .main-nav__wrapper {
+    margin-top: 77px;
+  }
+
+  .main-nav__list {
+    width: 570px;
+    font-size: 20px;
+    justify-content: flex-end;
+  }
 }

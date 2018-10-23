@@ -11,9 +11,28 @@
   font-family: $arial;
   text-decoration: none;
   color: $darkgrey;
+
+  &:hover .copyright__logo {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__logo {
+.copyright__logo-academy {
   width: 27px;
   height: 34px;
+
+  svg {
+    fill: #666666;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .copyright__logo {
+    margin-left: 22px;
+  }
 }

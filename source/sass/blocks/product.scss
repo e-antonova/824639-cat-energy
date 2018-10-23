@@ -1,14 +1,32 @@
 .product {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  font-family: $arial;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  border-collapse: collapse;
+  font-family: $arial;
   color: $darkgrey;
+}
+
+.product__description {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product__description-value {
   text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .product__description {
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+
+    border-bottom: 1px solid $border-grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product__description-field,
+  .product__description-value {
+    font-size: 16px;
+  }
 }

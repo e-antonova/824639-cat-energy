@@ -8,14 +8,17 @@
   </head>
   <body>
 
-    <header class="page-header">
-      <a class="page-header__logo  logo" href="index.html">
-        <img class="logo__img  logo__img--icon" src="http://placehold.it/33x38" width="33" height="38" alt="Кэт энерджи">
-        <img class="logo__img  logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
+    <header class="page-header  page-header--opened">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи">
+        </picture>
       </a>
+      <button class="page-header__toggle" type="button"></button>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button"></button>
           <ul class="main-nav__list  site-list">
             <li class="site-list__item  site-list__item--active">
               <a href="index.html">Главная</a>
@@ -42,66 +45,84 @@
         </div>
         <section class="personal-info">
           <h3 class="visually-hidden">Данные вашего кота</h3>
-          <div class="personal-info__row">
-            <label class="personal-info__label" for="name">Имя:*</label>
-            <input class="personal-info__input" type="text" name="Имя" id="name" placeholder="Барсик" required>
+          <div class="personal-info__wrapper--desktop">
+            <div class="personal-info__wrapper">
+              <div class="personal-info__row">
+                <label class="personal-info__label" for="name">Имя:*</label>
+                <input class="personal-info__input" type="text" name="Имя" id="name" placeholder="Барсик" required>
+              </div>
+              <div class="personal-info__row">
+                <label class="personal-info__label" for="weight">Вес (кг):*</label>
+                <input class="personal-info__input" type="text" name="Вес" id="weight" placeholder="7" required>
+              </div>
+              <div class="personal-info__row">
+                <label class="personal-info__label" for="age">Возраст (лет):</label>
+                <input class="personal-info__input" type="text" name="Возраст" id="age" placeholder="7">
+              </div>
+            </div>
+            <ul class="personal-info__programs">
+              <li class="personal-info__item">
+                <input class="personal-info__btn" type="radio" name="Программа" id="slim" value="Похудение" checked>
+                <label class="personal-info__label  personal-info__label--radio" for="slim"><span class="personal-info__name">Похудение</span></label>
+              </li>
+              <li class="personal-info__item">
+                <input class="personal-info__btn" type="radio" name="Программа" id="grow" value="Набор массы">
+                <label class="personal-info__label  personal-info__label--radio" for="grow"><span class="personal-info__name">Набор массы</span></label>
+              </li>
+              <li class="personal-info__item">
+                <input class="personal-info__btn" type="radio" name="Программа" id="advice" value="Не знаю (Нужен ваш совет)">
+                <label class="personal-info__label  personal-info__label--radio" for="advice"><span class="personal-info__name">Не знаю (Нужен ваш совет)</span></label>
+              </li>
+            </ul>
           </div>
-          <div class="personal-info__row">
-            <label class="personal-info__label" for="weight">Вес (кг):*</label>
-            <input class="personal-info__input" type="text" name="Вес" id="weight" placeholder="7" required>
+          <div class="personal-info__line  personal-info__line--1">
+            <h3 class="personal-info__title  personal-info__title--1">Контактные данные (владельца кота)</h3>
           </div>
-          <div class="personal-info__row">
-            <label class="personal-info__label" for="age">Возраст (лет):</label>
-            <input class="personal-info__input" type="text" name="Возраст" id="age" placeholder="7">
+          <div class="personal-info__wrapper  personal-info__wrapper--desktop2">
+            <div class="personal-info__row  personal-info__input--email">
+              <label class="personal-info__label" for="e-mail">E-mail:*</label>
+              <input class="personal-info__input" type="email" name="E-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+              <div class="personal-info__icon">
+                <img src="img/icon-mail.svg" width="18" height="20" alt="E-mail">
+              </div>
+            </div>
+            <div class="personal-info__row  personal-info__input--phone">
+              <label class="personal-info__label" for="tel">Телефон:*</label>
+              <input class="personal-info__input" type="tel" name="Телефон" id="tel" placeholder="8 (960) 900-60-90" required>
+              <div class="personal-info__icon">
+                <img src="img/icon-phone.svg" width="20" height="20" alt="Phone">
+              </div>
+            </div>
           </div>
-          <ul class="personal-info__programs">
-            <li class="personal-info__selection">
-              <input class="personal-info__btn" type="radio" name="Программа" id="slim" value="Похудение" checked>
-              <label class="personal-info__label  personal-info__label--radio" for="slim">Похудение</label>
-            </li>
-            <li class="personal-info__selection">
-              <input class="personal-info__btn" type="radio" name="Программа" id="grow" value="Набор массы">
-              <label class="personal-info__label  personal-info__label--radio" for="grow">Набор массы</label>
-            </li>
-            <li class="personal-info__selection">
-              <input class="personal-info__btn" type="radio" name="Программа" id="advice" value="Не знаю (Нужен ваш совет)">
-              <label class="personal-info__label  personal-info__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-          <h3 class="personal-info__title">Контактные данные (владельца кота)</h3>
-          <div class="personal-info__row">
-            <label class="personal-info__label" for="e-mail">E-mail:*</label>
-            <input class="personal-info__input  personal-info__input--email" type="email" name="E-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
-          </div>
-          <div class="personal-info__row">
-            <label class="personal-info__label" for="tel">Телефон:*</label>
-            <input class="personal-info__input  personal-info__input--phone" type="tel" name="Телефон" id="tel" placeholder="8 (960) 900-60-90" required>
-          </div>
-          <div class="personal-info__text">
+          <div class="personal-info__line">
             <h3 class="personal-info__title">Комментарий</h3>
+          </div>
+          <div class="personal-info__wrapper">
             <label class="personal-info__label">
               <textarea class="personal-info__input  personal-info__input--text" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
-          <h3 class="personal-info__title">Дополнительно</h3>
-          <ul class="personal-info__programs">
-            <li class="personal-info__item">
-              <input class="personal-info__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-              <label class="personal-info__label  personal-info__label--checkbox" for="sweetener">Сахарозаменитель</label>
-            </li>
-            <li class="personal-info__item">
-              <input class="personal-info__checkbox" type="checkbox" name="water" id="water">
-              <label class="personal-info__label  personal-info__label--checkbox" for="water">Питьевая вода</label>
-            </li>
-            <li class="personal-info__item">
-              <input class="personal-info__checkbox" type="checkbox" name="milk" id="milk">
-              <label class="personal-info__label  personal-info__label--checkbox" for="milk">Молоко</label>
-            </li>
-            <li class="personal-info__item">
-              <input class="personal-info__checkbox" type="checkbox" name="vitamins" id="vitamins">
-              <label class="personal-info__label  personal-info__label--checkbox" for="vitamins">Витамины</label>
-            </li>
-          </ul>
+          <div class="personal-info__line">
+            <h3 class="personal-info__title">Дополнительно</h3>
+          </div>
+            <ul class="personal-info__programs  personal-info__programs--checkbox">
+              <li class="personal-info__item">
+                <input class="personal-info__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                <label class="personal-info__label  personal-info__label--checkbox" for="sweetener"><span class="personal-info__name">Сахарозаменитель</span></label>
+              </li>
+              <li class="personal-info__item">
+                <input class="personal-info__checkbox" type="checkbox" name="water" id="water">
+                <label class="personal-info__label  personal-info__label--checkbox" for="water"><span class="personal-info__name">Питьевая вода</span></label>
+              </li>
+              <li class="personal-info__item">
+                <input class="personal-info__checkbox" type="checkbox" name="milk" id="milk">
+                <label class="personal-info__label  personal-info__label--checkbox" for="milk"><span class="personal-info__name">Молоко</span></label>
+              </li>
+              <li class="personal-info__item">
+                <input class="personal-info__checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <label class="personal-info__label  personal-info__label--checkbox" for="vitamins"><span class="personal-info__name">Витамины</span></label>
+              </li>
+            </ul>
         </section>
         <div class="form-program__footer">
           <input class="form-program__btn  button" type="submit" value="Отправить заявку">
@@ -111,7 +132,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper  page-footer__wrapper--grey">
         <div class="page-footer__contacts  contacts">
           <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
           <p class="contacts__text">
@@ -119,31 +140,37 @@
           </p>
         </div>
       </div>
-      <div class="page-footer__map  map">
-        <img class="map__img" src="http://placehold.it/" width="320" height="364" alt="Как нас найти">
-      </div>
+      <div class="page-footer__map  map"></div>
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo  logo" href="#">
-          <img class="logo__img  logo__img--text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
-        </a>
-        <ul class="social">
-          <li class="social__item">
-            <a class="social__link  social__link--vkontakte" href="#">Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link  social__link--instagram" href="#">Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link  social__link--facebook" href="#">Facebook</a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright  copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-academy" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        <div class="page-footer__wrapper--bottom">
+          <a class="page-footer__logo" href="index.html">
+              <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
           </a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link  social__link--vkontakte" href="#">
+                <img src="img/icon-vk-mobile.svg" width="22" height="12" alt="Вконтакте">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link  social__link--instagram" href="#">
+                <img src="img/icon-insta-mobile.svg" width="16" height="16" alt="Instagram">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link  social__link--facebook" href="#">
+                <img src="img/icon-fb-mobile.svg" width="10" height="19" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+          <div class="page-footer__copyright  copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__logo-academy" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            </a>
+          </div>
         </div>
-    </div>
+      </div>
     </footer>
   </body>
 </html>

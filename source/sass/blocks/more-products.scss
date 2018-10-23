@@ -1,16 +1,56 @@
 .more-products {
   @include wrapper;
+  position: relative;
+
+  text-align: center;
+  border-bottom: 1px solid #ededed;
+}
+
+.more-products::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+
+  opacity: 0.2;
+  background-color: $bg-color;
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: $tablet-width) {
   .more-products {
-    width: 324px;
+    margin-top: auto;
+    min-height: 430px;
+
+    background: none;
+    border: 1px solid #f2f2f2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more-products::after {
+    top: 52px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .more-products {
-    width: 245px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: auto;
+    width: 243px;
+    height: 431px;
+    margin-right: 80px;
+    padding: 0;
   }
 }
 
@@ -18,25 +58,90 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .more-products__title {
+  margin: 0;
+  padding-top: 78px;
+
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   font-family: $oswald;
   text-transform: uppercase;
 }
 
+@media (min-width: $tablet-width) {
+  .more-products__text {
+    padding-top: 50px;
+  }
+
+  .more-products__title {
+    margin: 109px auto auto;
+    max-width: 140px;
+    width: 100%;
+    padding-top: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-products__text {
+    padding-top: 0;
+    margin: 25px auto;
+  }
+}
+
 .more-products__description {
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   font-family: $arial;
   color: $darkgrey;
 }
 
+@media (min-width: $tablet-width) {
+  .more-products__description {
+    max-width: 180px;
+    width: 100%;
+    margin: 27px auto 85px;
+
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
+
 .button--show-more {
   color: $darkgrey;
 
-  background-color: #f2f2f2;
+  background-color: $grey;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: #b3b3b3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button--show-more {
+    width: 249px;
+    margin: 19px auto 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--show-more {
+    width: 169px;
+    margin: 19px auto 20px;
+  }
 }
