@@ -40,14 +40,13 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-    width: 1300px;
-    margin: 0 auto;
-
     border: none;
   }
 
   .advantages__wrapper {
     width: 1220px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .advantages__title {
@@ -107,6 +106,25 @@
 
   &--time::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@2x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@2x.png");
+  }
+
+  &--cutlery::before {
+    background-image: url("../img/advantage-dining@2x.png");
+  }
+
+  &--time::before {
+    background-image: url("../img/advantage-clock@2x.png");
   }
 }
 

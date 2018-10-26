@@ -1,8 +1,9 @@
 .preview__wrapper {
-  @include wrapper;
+  margin: 0 auto;
 }
 
 .preview {
+  @include wrapper;
   position: relative;
 
   min-height: 305px;
@@ -65,7 +66,7 @@
     display: inline-block;
     width: 415px;
     margin-left: 88px;
-    margin-top: 18px;
+    margin-top: 35px;
 
     font-size: 60px;
     line-height: 60px;
@@ -114,14 +115,14 @@
   .preview,
   .preview__wrapper {
     display: flex;
+    margin: 0 auto;
   }
 
   .preview__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
-    width: 570px;
+    width: 1220px;
   }
 
   .preview {
@@ -129,37 +130,36 @@
 
     min-height: 569px;
     justify-content: flex-start;
-    width: 1220px;
+    width: 100%;
   }
 
   .preview__intro {
     z-index: 300;
 
-    margin: 95px 75px 44px auto;
-    padding-top: 0;
+    margin-left: 70px;
+    padding-top: 80px;
 
     text-align: left;
   }
 
   .preview__slogan {
     min-width: 429px;
-    margin: 0 61px 54px auto;
+    margin-left: 70px;
+    margin-top: 25px;
 
     font-weight: 400px;
   }
 
   .preview__button {
-    margin-left: auto;
-    margin-right: 245px;
-    margin-top: 0;
+    margin-left: 70px;
+    margin-top: 50px;
   }
 
   .preview__picture-wrapper {
     z-index: 500;
     top: 110px;
-    left: auto;
-    right: -50px;
-    bottom: 50px;
+    left: 390px;
+    bottom: 45px;
 
     padding: 0;
   }

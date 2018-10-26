@@ -9,29 +9,31 @@
   <body>
 
     <header class="page-header  page-header--preview  page-header--opened">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи">
-        </picture>
-      </a>
-      <button class="page-header__toggle" type="button"></button>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list  site-list">
-            <li class="site-list__item  site-list__item--white  site-list__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item  site-list__item--white">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item  site-list__item--white">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи">
+          </picture>
+        </a>
+        <button class="page-header__toggle" type="button"></button>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list  site-list">
+              <li class="site-list__item  site-list__item--white  site-list__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="site-list__item  site-list__item--white">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item  site-list__item--white">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -42,9 +44,9 @@
           <b class="preview__intro">Функциональное питание для котов</b>
           <p class="preview__slogan">Занялся собой? Займись котом!</p>
           <picture class="preview__picture-wrapper">
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-            <img class="preview__picture" src="img/index-can-mobile@1x.png" alt="Банка с питанием Кэт энерджи">
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="preview__picture" src="img/index-can-mobile@1x.png 1x" srcset="img/index-can-mobile@2x.png 2x" alt="Банка с питанием Кэт энерджи">
           </picture>
           <a class="preview__button  button" href="form.html">Подобрать программу</a>
         </div>
@@ -98,43 +100,55 @@
         </div>
       </section>
       <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__list">
-            <dl class="example__item">
-              <div class="example__item--wrapper">
-                <dt class="example__item-value">5 кг</dt>
-                <dd class="example__item-description">снижение веса</dd>
-              </div>
-            </dl>
-            <dl class="example__item">
-              <div class="example__item--wrapper">
-                <dt class="example__item-value">60 дней</dt>
-                <dd class="example__item-description">затрачено времени</dd>
-              </div>
-            </dl>
-            <p class="example__conclusion">
-              Затраты на питание: <span>15 000 руб.</span>
+        <div class="example__wrapper-center">
+          <div class="example__wrapper-text">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-          </div>
-        </div>
-        <div class="example__slider">
-          <input class="example__slider--input1" type="radio" id="before" name="img-toggle" checked>
-          <input class="example__slider--input2" type="radio" id="after" name="img-toggle">
-          <div class="example__images">
-            <div class="example__slider-img  example__slider-img--before"></div>
-            <div class="example__slider-img  example__slider-img--after"></div>
-          </div>
-          <div class="example__slider-toggles">
-            <p class="example__slider-text">Было</p>
-            <div class="example__slider-switch">
-              <label class="example__slider--label  example__slider--label1" for="before"></label>
-              <label class="example__slider--label  example__slider--label2" for="after"></label>
+            <div class="example__list">
+              <dl class="example__item">
+                <div class="example__item-wrapper">
+                  <dt class="example__item-value">5 кг</dt>
+                  <dd class="example__item-description">снижение веса</dd>
+                </div>
+              </dl>
+              <dl class="example__item">
+                <div class="example__item-wrapper">
+                  <dt class="example__item-value">60 дней</dt>
+                  <dd class="example__item-description">затрачено времени</dd>
+                </div>
+              </dl>
+              <p class="example__conclusion">
+                Затраты на питание: <span>15 000 руб.</span>
+              </p>
             </div>
-            <p class="example__slider-text">Стало</p>
+          </div>
+          <div class="example__slider-gradient">
+            <div class="example__slider">
+              <input class="example__slider  example__slider--input1" type="radio" id="before" name="img-toggle" checked>
+              <input class="example__slider  example__slider--input2" type="radio" id="after" name="img-toggle">
+              <div class="example__images">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__slider-img  example__slider-img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото толстого кота">
+                </picture>
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__slider-img  example__slider-img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото худого кота">
+                </picture>
+              </div>
+              <div class="example__slider-toggles">
+                <p class="example__slider-text">Было</p>
+                <div class="example__slider-switch">
+                  <label class="example__slider  example__slider--label  example__slider--label1" for="before"></label>
+                  <label class="example__slider  example__slider--label  example__slider--label2" for="after"></label>
+                </div>
+                <p class="example__slider-text">Стало</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -143,10 +157,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts  contacts">
-          <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
-          <p class="contacts__text">
-            ул. Большая Конюшенная, д. 19/8  <span>Санкт-Петербург</span>
-          </p>
+          <div class="contacts__card">
+            <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
+            <p class="contacts__text">
+              ул. Большая Конюшенная, д. 19/8  <span>Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map  map"></div>
