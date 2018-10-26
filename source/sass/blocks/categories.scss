@@ -127,21 +127,31 @@
 
   &:hover::before,
   &:hover::after {
-    width: 19px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::before {
+    width: 23px;
     height: 3px;
+  }
 
+  &:active::before,
+  &:active::after {
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:active {
-    opacity: 0.3;
-
-    background-image: url("../img/icon-right-arrow-verylong.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &:active::before {
+    width: 23px;
+    height: 3px;
   }
+}
+
+.categories__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
@@ -202,8 +212,8 @@
     overflow: hidden;
   }
 
-  .categories__link:hover::after {
-    margin-left: 23px;
+  .categories__link:hover::before {
+    opacity: 0.3%;
   }
 }
 

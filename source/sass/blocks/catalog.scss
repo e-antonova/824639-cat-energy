@@ -6,36 +6,35 @@
 @media (min-width: $tablet-width) {
   .catalog {
     @include wrapper;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  .catalog__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-    margin-top: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog {
     margin: 0 auto;
-    padding: 0;
     margin-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
-    width: 1220px;
+    width: 1300px;
   }
 }
 
 .catalog__title {
   @include title;
-  vertical-align: middle;
-  padding: 0 20px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__title {
     padding-bottom: 23px;
-    margin: 45px 0 0;
+    margin: 50px 0 0;
 
     font-size: 60px;
     line-height: 60px;
@@ -44,7 +43,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog__title {
-    padding: 50px 110px;
+    padding-top: 50px;
   }
 }
 

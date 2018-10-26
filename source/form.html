@@ -9,29 +9,31 @@
   <body>
 
     <header class="page-header  page-header--opened">
-      <a class="page-header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи">
-        </picture>
-      </a>
-      <button class="page-header__toggle" type="button"></button>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list  site-list">
-            <li class="site-list__item  site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи">
+          </picture>
+        </a>
+        <button class="page-header__toggle" type="button"></button>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list  site-list">
+              <li class="site-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item  site-list__item--active">
+                <a>Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -45,7 +47,7 @@
         </div>
         <section class="personal-info">
           <h3 class="visually-hidden">Данные вашего кота</h3>
-          <div class="personal-info__wrapper--desktop">
+          <div class="personal-info__wrapper-desktop">
             <div class="personal-info__wrapper">
               <div class="personal-info__row">
                 <label class="personal-info__label" for="name">Имя:*</label>
@@ -78,7 +80,7 @@
           <div class="personal-info__line  personal-info__line--1">
             <h3 class="personal-info__title  personal-info__title--1">Контактные данные (владельца кота)</h3>
           </div>
-          <div class="personal-info__wrapper  personal-info__wrapper--desktop2">
+          <div class="personal-info__wrapper  personal-info__wrapper-desktop2">
             <div class="personal-info__row  personal-info__input--email">
               <label class="personal-info__label" for="e-mail">E-mail:*</label>
               <input class="personal-info__input" type="email" name="E-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
@@ -97,7 +99,7 @@
           <div class="personal-info__line">
             <h3 class="personal-info__title">Комментарий</h3>
           </div>
-          <div class="personal-info__wrapper">
+          <div class="personal-info__wrapper  personal-info__wrapper--text">
             <label class="personal-info__label">
               <textarea class="personal-info__input  personal-info__input--text" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
@@ -134,10 +136,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper  page-footer__wrapper--grey">
         <div class="page-footer__contacts  contacts">
-          <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
-          <p class="contacts__text">
-            ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
-          </p>
+          <div class="contacts__card">
+            <b class="contacts__title">Приглашаем  к сотрудничеству  дилеров!</b>
+            <p class="contacts__text">
+              ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
+            </p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map  map"></div>

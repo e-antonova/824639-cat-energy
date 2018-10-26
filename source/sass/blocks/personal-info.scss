@@ -13,6 +13,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 570px;
+    padding: 0;
+    margin-right: 40px;
   }
 }
 
@@ -36,15 +39,15 @@
     margin: 0 0 30px;
   }
 
-  .personal-info__wrapper--desktop {
+  .personal-info__wrapper-desktop {
+    @include wrapper;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 1220px;
+    justify-content: center;
     height: 200px;
   }
 
-  .personal-info__wrapper--desktop2 {
+  .personal-info__wrapper-desktop2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -74,21 +77,20 @@
   margin-right: 15px;
 }
 
-.personal-info__input:hover {
-  border: 1px solid $border-grey;
-}
-
-.personal-info__input:focus {
-  outline: 0;
-  border: 1px solid $black;
-}
-
 .personal-info__input:invalid {
   border: 1px solid #ff8282;
 }
 
-.personal-info__input:invalid ~ .questionary__mail-icon,
-.personal-info__input:invalid ~ .questionary__tel-icon {
+.personal-info__input:hover {
+  border: 1px solid $darkgrey;
+}
+
+.personal-info__input:active {
+  outline: 0;
+  border: 1px solid $black;
+}
+
+.personal-info__input:invalid ~ .personal-info__icon {
   fill: #ff8282;
 }
 
@@ -170,9 +172,10 @@
 .personal-info__programs {
   @include reset-list;
   display: block;
-  width: 320px;
+  min-width: 320px;
   padding-top: 20px;
   padding-bottom: 8px;
+  margin: 0 auto;
 
   outline: 1px solid $border-grey;
 }
@@ -200,7 +203,7 @@
   .personal-info__programs {
     display: flex;
     margin: 0;
-    margin-right: 110px;
+    margin-left: 40px;
     width: 570px;
     height: 167px;
   }
@@ -273,7 +276,8 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 70px;
-    padding-left: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .personal-info__title--1 {
@@ -303,6 +307,12 @@
     top: 45%;
   }
 
+  .personal-info__line {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
   .personal-info__line {
     padding: 0 70px;
   }
@@ -346,7 +356,14 @@
 @media (min-width: $desktop-width) {
   .personal-info__input--text {
     margin-left: 0;
-    width: 1219px;
+    width: 1220px;
+  }
+
+  .personal-info__wrapper--text {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+    padding: 0 40px;
   }
 }
 
@@ -394,7 +411,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 545px;
+    width: 680px;
     height: 110px;
     margin-left: 50px;
     margin-top: 22px;
@@ -403,12 +420,18 @@
 
 @media (min-width: $desktop-width) {
   .personal-info__programs--checkbox {
+    @include wrapper;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1220px;
+    width: 1300px;
     height: 60px;
-    margin-left: 85px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 22px;
+  }
+
+  .personal-info__programs--checkbox > .personal-info__item {
+    padding-left: 0;
   }
 }

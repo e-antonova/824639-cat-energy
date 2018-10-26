@@ -52,6 +52,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .form-program__header {
+    margin: 0 auto 70px;
+    width: 1300px;
+  }
+
   .form-program__title {
     margin-top: 90px;
   }
@@ -96,6 +101,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .form-program__footer {
+    margin: 0 auto;
+    width: 1300px;
+  }
+
   .form-program__btn {
     width: 570px;
     margin: 0;

@@ -1,4 +1,4 @@
-.contacts {
+.contacts__card {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts {
+  .contacts__card {
     width: 630px;
     align-items: center;
     min-height: 201px;
@@ -68,6 +68,15 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
+    position: relative;
+  }
+
+  .page-footer__wrapper {
+    width: 1300px;
+    margin: 0 auto;
+  }
+
+  .contacts__card {
     position: absolute;
 
     min-width: auto;
