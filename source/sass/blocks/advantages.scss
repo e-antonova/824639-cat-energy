@@ -111,19 +111,19 @@
 
 @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-  &--leaf::before {
+  .advantages__item--leaf::before {
     background-image: url("../img/advantage-leaf@2x.png");
   }
 
-  &--powder::before {
+  .advantages__item--powder::before {
     background-image: url("../img/advantage-powder@2x.png");
   }
 
-  &--cutlery::before {
+  .advantages__item--cutlery::before {
     background-image: url("../img/advantage-dining@2x.png");
   }
 
-  &--time::before {
+  .advantages__item--time::before {
     background-image: url("../img/advantage-clock@2x.png");
   }
 }

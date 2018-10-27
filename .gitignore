@@ -12,3 +12,4 @@ source/css/*.css
 Thumbs.db
 csscomb.json
 .htmlhintrc
+build/
