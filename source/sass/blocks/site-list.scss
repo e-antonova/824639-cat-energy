@@ -6,7 +6,7 @@
 @media (min-width: $desktop-width) {
   .site-list {
     justify-content: space-between;
-    width: 480px;
+    width: 484px;
     margin-left: auto;
   }
 }
@@ -41,24 +41,24 @@
   &:hover {
     opacity: 0.6;
   }
+}
 
-  .site-list__item a[href]:active {
-    opacity: 0.3;
-  }
+.site-list__item a:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .site-list__item {
-    margin-right: 30px;
+    margin-right: 35px;
     margin-left: 0;
     padding-top: 0;
-    padding-bottom: 1px;
+    padding-bottom: 5px;
 
 
     font-weight: 400;
     font-size: 18px;
 
-    border: 0;
+    border-bottom: 2px solid transparent;
   }
 
   .site-list__item:first-child {

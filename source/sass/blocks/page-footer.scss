@@ -21,6 +21,14 @@
   max-width: 135px;
   margin: 0 auto;
   padding: 35px 0 30px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__wrapper:last-of-type {

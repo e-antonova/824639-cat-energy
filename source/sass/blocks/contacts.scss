@@ -14,7 +14,7 @@
 }
 
 .contacts__title {
-  margin: 20px 0;
+  margin: 30px 0;
   width: 125px;
 
   font-size: 16px;
@@ -24,7 +24,8 @@
 }
 
 .contacts__text {
-  width: 135px;
+  width: 137px;
+  margin-top: 31px;
 
   font-family: $arial;
   font-size: 14px;
@@ -44,6 +45,7 @@
 
   .contacts__title {
     min-width: 155px;
+    margin-left: 30px;
 
     font-size: 20px;
     line-height: 25px;
@@ -53,11 +55,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 160px;
+    min-width: 192px;
 
     font-size: 16px;
     line-height: 20px;
-    text-align: right;
   }
 
   .contacts__text span {

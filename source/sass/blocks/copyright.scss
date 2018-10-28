@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .copyright__link {
@@ -12,26 +13,39 @@
   text-decoration: none;
   color: $darkgrey;
 
-  &:hover .copyright__logo {
-    fill: $green;
-  }
-
   &:active {
     opacity: 0.3;
   }
 }
 
-.copyright__logo-academy {
+.copyright__logo {
   width: 27px;
   height: 34px;
+  padding: 0;
+  margin: 0;
+  margin-right: 8px;
 
-  svg {
-    fill: #666666;
-  }
+  font-size: 0;
 }
 
+.copyright__logo-academy {
+  fill: $darkgrey;
+}
+
+.copyright__logo-academy:hover {
+  fill: $green;
+}
+
+.copyright__logo-academy:active {
+  fill: $green;
+  opacity: 0.3;
+}
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    margin-left: -13px;
+  }
+
   .copyright__logo {
     margin-left: 22px;
   }
