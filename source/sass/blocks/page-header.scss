@@ -27,7 +27,9 @@
   width: 192px;
   height: 38px;
   padding: 13px 0;
+}
 
+.page-header__logo {
   &:hover {
     opacity: 0.8;
   }
@@ -159,14 +161,10 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__logo {
+  .page-header__logo-image {
     width: 205px;
     height: 62px;
     padding-top: 54px;
-  }
-
-  .page-header__logo-image {
-    padding: 0;
   }
 
   .page-header__toggle {

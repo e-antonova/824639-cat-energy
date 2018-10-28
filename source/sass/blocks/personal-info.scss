@@ -39,7 +39,7 @@
     margin: 0 0 30px;
   }
 
-  .personal-info__wrapper-desktop {
+  .personal-info__wrapper-center {
     @include wrapper;
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
     height: 200px;
   }
 
-  .personal-info__wrapper-desktop2 {
+  .personal-info__wrapper-center2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -94,8 +94,11 @@
   fill: #ff8282;
 }
 
-.personal-info__input:focus ~ .personal-info__input--email,
-.personal-info__input:focus ~ .personal-info__input--phone {
+.personal-info__input:hover ~ .personal-info__icon {
+  fill: $black;
+}
+
+.personal-info__input:focus ~ .personal-info__icon {
   fill: $green;
 }
 
@@ -153,9 +156,8 @@
   border: 1px solid #bbbbbb;
 }
 
-.personal-info__label--radio:focus {
-  outline: 0;
-  border: 1px solid $black;
+.personal-info__label--radio:active {
+  opacity: 0.3;
 }
 
 .personal-info__input {
@@ -181,6 +183,23 @@
 }
 
 @media (min-width: $tablet-width) {
+  .personal-info__label--radio {
+    width: 40px;
+    height: 40px;
+  }
+
+  .personal-info__label--radio::before {
+    left: 28%;
+    top: 28%;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .personal-info__name {
+    padding-left: 65px;
+  }
+
   .personal-info__programs {
     display: flex;
     flex-direction: column;
@@ -273,11 +292,12 @@
 
 @media (min-width: $tablet-width) {
   .personal-info__title {
-    font-size: 36px;
-    line-height: 36px;
     margin-bottom: 70px;
     padding-left: 40px;
     padding-right: 40px;
+
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .personal-info__title--1 {
@@ -401,9 +421,8 @@
   border: 1px solid #bbbbbb;
 }
 
-.personal-info__label--checkbox:focus {
-  outline: 0;
-  border: 1px solid $black;
+.personal-info__label--checkbox:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
@@ -415,6 +434,15 @@
     height: 110px;
     margin-left: 50px;
     margin-top: 22px;
+  }
+
+  .personal-info__label--checkbox {
+    width: 40px;
+    height: 40px;
+  }
+
+  .personal-info__label--checkbox::before {
+    left: 14px;
   }
 }
 

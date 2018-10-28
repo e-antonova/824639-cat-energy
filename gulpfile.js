@@ -12,13 +12,15 @@ var svg = require("gulp-svgstore");
 var minifycss = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require('gulp-webp');
+var include = require('posthtml-include');
+var posthtml = require('gulp-posthtml');
 
-//очистим папку build
+// очистим папку build
 gulp.task("clean", function() {
   return del("build");
 });
 
-//сделаем svg спрайт
+// сделаем svg спрайт
 gulp.task("makesprite", function() {
   return gulp.src("source/img/icon-*.svg")
     .pipe(svg({
@@ -28,7 +30,7 @@ gulp.task("makesprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-//минифицируем стили
+// минифицируем стили
 gulp.task("styleminify", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -41,19 +43,19 @@ gulp.task("styleminify", function () {
     .pipe(gulp.dest("build/css"));
 });
 
-//скопируем в build шрифты, картинки, html
+// скопируем в build шрифты, картинки, скрипты
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/img/**",
-    "source/*.html"
+    "source/js/**",
     ], {
       base: "source"
     })
     .pipe(gulp.dest("build"));
 });
 
-//оптимизируем картинки
+// оптимизируем картинки
 gulp.task("optimizeimages", function () {
   return gulp.src("build/img/*.{png,jpg,svg}")
     .pipe(imagemin([
@@ -75,11 +77,14 @@ gulp.task("makewebp", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-//синхронизация html
-gulp.task("htmlsync", function() {
+// заберем html, используем шаблонизатор
+gulp.task("html", function() {
   return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest("build"));
-  });
+});
 
 // запустим локальный сервер
 gulp.task("server", function () {
@@ -92,7 +97,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("styleminify")).on("change", server.reload);
-  gulp.watch("source/*.html", gulp.series("htmlsync")).on("change", server.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
 
 
@@ -103,6 +108,7 @@ gulp.task("build",
     "makesprite",
     "styleminify",
     "copy",
+    "html",
     "optimizeimages",
     "makewebp"
   )

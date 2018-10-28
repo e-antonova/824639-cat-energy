@@ -48,10 +48,12 @@
 
 .example__title {
   @include title;
+  padding-top: 17px;
+  margin-top: 38px;
 }
 
 .example__description {
-  margin-bottom: 25px;
+  margin-right: 14px;
   margin-top: -5px;
 
   font-size: 14px;
@@ -65,7 +67,8 @@
     line-height: 60px;
     font-size: 60px;
     margin: 0;
-    padding-bottom: 83px;
+    margin-top: -40px;
+    padding-bottom: 69px;
   }
 
   .example__description {
@@ -100,18 +103,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  padding: 10px 0;
+  margin-top: -5px;
 }
 
 .example__item {
   width: 124px;
-  padding: 12px 10px 0;
+  padding: 10px 10px 0;
 
   text-align: center;
 
   border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 
@@ -126,6 +128,7 @@
   line-height: 24px;
   font-family: $oswald;
   color: $black;
+  text-transform: uppercase;
 }
 
 .example__item-description {
@@ -151,6 +154,7 @@
   .example__list {
     display: flex;
     justify-content: space-between;
+    margin-top: 38px;
   }
 
   .example__item {
@@ -242,7 +246,7 @@
   display: flex;
   justify-content: space-between;
   width: 198px;
-  margin: 20px auto;
+  margin: 17px auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -292,6 +296,8 @@
   .example__slider-text {
     border-bottom: 1px dotted $border-grey;
 
+    font-size: 20px;
+
     &:active {
       border-bottom: 1px solid $border-grey;
     }
@@ -300,7 +306,7 @@
 
 @media (min-width: $tablet-width) {
   .example__slider-gradient {
-    margin-top: 255px;
+    margin-top: 240px;
     background: linear-gradient(to right, $grey 50%, #eaeaea 50%);
     height: 462px;
   }
@@ -313,15 +319,11 @@
   }
 }
 
-.example__images {
-  margin: 0 auto;
-}
-
 .example__slider-img--before,
 .example__slider-img--after {
   width: 320px;
   height: 240px;
-  margin-top: 37px;
+  margin-top: 25px;
   display: none;
 }
 
@@ -384,7 +386,7 @@
   .example__slider--label1 {
     position: relative;
     top: -14px;
-    left: 2px;
+    left: 3px;
 
     width: 32px;
     height: 32px;

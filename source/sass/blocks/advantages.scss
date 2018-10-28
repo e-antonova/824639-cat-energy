@@ -4,6 +4,8 @@
 
 .advantages__title {
   @include title;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__list {
@@ -14,7 +16,7 @@
   .advantages {
     border-bottom: 1px solid $grey;
 
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .advantages__wrapper {
@@ -35,6 +37,7 @@
     flex-wrap: wrap;
     min-width: 630px;
     min-height: 550px;
+    margin-bottom: 40px;
   }
 }
 
@@ -77,7 +80,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 20px 0;
+  margin: 22px 0;
 
   &::before {
     content: "";
@@ -135,8 +138,9 @@
 
     flex-direction: column;
     align-items: flex-start;
-    width: 324px;
+    width: 294px;
     min-height: 280px;
+    margin-bottom: 14px;
 
     counter-increment: section;
   }

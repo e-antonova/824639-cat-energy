@@ -312,7 +312,6 @@
 
 @media (min-width: $tablet-width) {
   .additional-products__promo::before {
-    margin-left: -5px;
     margin-top: 60px;
   }
 
@@ -331,7 +330,6 @@
 @media (min-width: $desktop-width) {
   .additional-products__promo::before {
     width: 245px;
-    margin-left: -54px;
   }
 
   .additional-products__description {
