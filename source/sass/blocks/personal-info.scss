@@ -63,18 +63,27 @@
   }
 }
 
-.personal-info__label,
-.personal-info__input,
-.personal-info__input::placeholder {
+.personal-info__label {
+  align-self: center;
+  margin-right: 15px;
+
   font-size: 16px;
   line-height: 18px;
   font-family: $oswald;
   text-transform: uppercase;
 }
 
-.personal-info__label {
-  align-self: center;
-  margin-right: 15px;
+.personal-info__input {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $oswald;
+}
+.personal-info__input::placeholder {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $oswald;
 }
 
 .personal-info__input:invalid {

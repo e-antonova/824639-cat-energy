@@ -84,7 +84,7 @@
   .example__title {
     width: 365px;
     padding-bottom: 146px;
-    margin: -135px 0 10px 0;
+    margin: -154px 0 10px 10px;
 
     font-size: 60px;
     line-height: 60px;
@@ -93,6 +93,7 @@
   .example__description {
     width: 432px;
     margin-right: auto;
+    margin-left: 10px;
 
     line-height: 24px;
     font-size: 16px;
@@ -208,6 +209,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 370px;
+    margin-top: 35px;
+    margin-left: 10px;
   }
 
   .example__item {
@@ -224,7 +227,7 @@
     justify-content: space-between;
     width: 320px;
     margin: 0;
-    padding: 56px 0 20px 5px;
+    padding: 43px 0 20px 5px;
 
     text-align: left;
 
@@ -273,7 +276,7 @@
 @media (min-width: $desktop-width) {
   .example__slider {
     @include wrapper;
-    width: 718px;
+    width: 702px;
     margin: -245px 0 0;
     height: auto;
   }
@@ -316,6 +319,7 @@
   .example__slider-gradient {
     background: linear-gradient(to right, $grey 50%, #eaeaea 50%);
     height: auto;
+    margin-top: 245px;
   }
 }
 
@@ -495,7 +499,7 @@
   }
 
   .example__slider-toggles {
-    right: 37px;
+    right: 44px;
 
     margin-left: -46px;
     bottom: 39px;

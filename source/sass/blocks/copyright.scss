@@ -42,6 +42,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    margin-left: -13px;
+  }
+
   .copyright__logo {
     margin-left: 22px;
   }

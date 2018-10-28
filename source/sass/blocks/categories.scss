@@ -225,7 +225,7 @@
     min-width: 570px;
     min-height: 372px;
     padding: 0;
-    margin: 80px 0 0;
+    margin: 90px 0 0;
   }
 
   .categories article:first-of-type {
@@ -278,7 +278,10 @@
 
   .categories__description {
     margin: 0;
-    padding: 0 0 32px 52px;
+    padding-left: 52px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: -19px;
     width: 465px;
 
     line-height: 24px;
@@ -286,7 +289,8 @@
   }
 
   .categories__link {
-    margin: 20px 20px;
+    margin-bottom: -26px;
+    margin-top: 0;
 
     border: none;
   }

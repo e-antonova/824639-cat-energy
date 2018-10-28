@@ -106,6 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 
     border-left: 1px solid $border-grey;
@@ -228,6 +229,7 @@
   align-items: center;
   width: 100%;
   min-height: 290px;
+  margin-bottom: 35px;
 
   background-color: #6fb346;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -299,20 +301,16 @@
   display: block;
   width: 240px;
   height: 60px;
-  margin: 50px -45px 50px;
+  margin: 61px -45px 50px;
 
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: center;
-
-  svg {
-    fill: $bg-color;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .additional-products__promo::before {
-    margin-top: 60px;
+    margin-top: 103px;
   }
 
   .additional-products__description {

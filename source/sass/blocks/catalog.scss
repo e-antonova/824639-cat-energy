@@ -29,6 +29,7 @@
 
 .catalog__title {
   @include title;
+  margin-top: 16px;
 }
 
 @media (min-width: $tablet-width) {
@@ -44,6 +45,7 @@
 @media (min-width: $desktop-width) {
   .catalog__title {
     padding-top: 50px;
+    margin-top: 20px;
   }
 }
 
@@ -119,6 +121,7 @@
   display: flex;
   flex-direction: column;
   width: 140px;
+  margin: 0 20px;
 }
 
 .catalog__item__link {
@@ -127,6 +130,7 @@
 
 .catalog__name {
   width: 60%;
+  margin-top: 20px;
 
   font-weight: 400;
   font-size: 16px;
@@ -138,7 +142,8 @@
 @media (min-width: $tablet-width) {
   .catalog__content {
     width: auto;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0 40px;
   }
 
   .catalog__name {
@@ -172,14 +177,13 @@
 }
 
 .catalog__btn {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__btn {
     width: 249px;
-    margin: 25px auto 20px;
+    margin: 25px auto 14px;
 
     font-size: 16px;
   }

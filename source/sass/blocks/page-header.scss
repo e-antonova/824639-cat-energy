@@ -26,7 +26,7 @@
   display: block;
   width: 192px;
   height: 38px;
-  padding: 13px 0;
+  margin: 13px 0;
 }
 
 .page-header__logo {
@@ -82,6 +82,7 @@
   top: 0;
   right: 0;
   left: auto;
+  display: none;
 
   &::before,
   &::after {
@@ -147,7 +148,7 @@
   .page-header__logo-image {
     width: 175px;
     height: 58px;
-    padding: 24px 0 0 0;
+    margin: 24px 0 0 0;
   }
 
   .page-header__toggle {
@@ -164,7 +165,7 @@
   .page-header__logo-image {
     width: 205px;
     height: 62px;
-    padding-top: 54px;
+    margin-top: 54px;
   }
 
   .page-header__toggle {
