@@ -73,12 +73,6 @@
   text-transform: uppercase;
 }
 
-.personal-info__input {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 18px;
-  font-family: $oswald;
-}
 .personal-info__input::placeholder {
   text-transform: uppercase;
   font-size: 16px;
@@ -173,6 +167,10 @@
   flex-grow: 1;
   padding: 13px;
   height: 45px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $oswald;
 
   color: $darkgrey;
 
