@@ -34,7 +34,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__card {
-    width: 630px;
+    width: 625px;
     align-items: center;
     min-height: 201px;
     padding-left: 40px;
@@ -45,7 +45,6 @@
 
   .contacts__title {
     min-width: 155px;
-    margin-left: 30px;
 
     font-size: 20px;
     line-height: 25px;
@@ -56,20 +55,30 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 192px;
+    height: 80px;
+    margin-bottom: 30px;
 
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
   }
 
   .contacts__text span {
     display: block;
-    padding-top: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+  }
+
+  .contacts__title {
+    margin-left: 30px;
+  }
+
+  .contacts__text {
+    text-align: left;
   }
 
   .page-footer__wrapper {

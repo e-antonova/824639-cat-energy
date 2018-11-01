@@ -1,12 +1,13 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
+  padding-top: 18px;
   margin-bottom: 20px;
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   font-size: 16px;
   line-height: 16px;
   font-family: $arial;
@@ -18,17 +19,14 @@
   }
 }
 
-.copyright__logo {
-  width: 27px;
-  height: 34px;
+.copyright__logo-academy {
+  width: 40px;
+  height: 40px;
   padding: 0;
   margin: 0;
-  margin-right: 8px;
+  margin-right: -7px;
 
   font-size: 0;
-}
-
-.copyright__logo-academy {
   fill: $darkgrey;
 }
 
@@ -43,10 +41,6 @@
 
 @media (min-width: $tablet-width) {
   .copyright {
-    margin-left: -13px;
-  }
-
-  .copyright__logo {
-    margin-left: 22px;
+    width: 162px;
   }
 }

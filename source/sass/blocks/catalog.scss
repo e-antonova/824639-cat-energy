@@ -15,6 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 70px;
   }
 }
 
@@ -24,6 +25,10 @@
     margin-bottom: 40px;
     justify-content: flex-start;
     width: 1300px;
+  }
+
+  .catalog__wrapper {
+    margin-bottom: 80px;
   }
 }
 
@@ -49,29 +54,25 @@
   }
 }
 
-.catalog__item-wrapper {
+.catalog__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+  padding-bottom: 24px;
+  align-items: flex-start;
 
-.catalog__item {
   border-top: 1px solid #ededed;
 }
 
 @media (min-width: $tablet-width) {
-  .catalog__item-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-  }
-
   .catalog__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     width: 324px;
     min-height: 520px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
 
     border-top: none;
     background: linear-gradient(to top, $grey 75%, $bg-color 25%);
@@ -85,6 +86,7 @@
     width: 245px;
     min-width: auto;
     padding: 0;
+    padding-bottom: 10px;
     margin-bottom: 3px;
     margin-right: 80px;
 
@@ -105,7 +107,7 @@
   .catalog__image {
     display: flex;
     align-items: flex-end;
-    width: 245px;
+    width: 324px;
     height: 270px;
   }
 }
@@ -121,16 +123,18 @@
   display: flex;
   flex-direction: column;
   width: 140px;
-  margin: 0 20px;
+  padding-top: 19px;
 }
 
-.catalog__item__link {
+.catalog__item-link {
   color: $black;
+  margin-bottom: 11px;
 }
 
 .catalog__name {
   width: 60%;
-  margin-top: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   font-weight: 400;
   font-size: 16px;
@@ -157,7 +161,7 @@
 
   .catalog__details {
     width: 250px;
-    margin: 25px auto 0;
+    margin: 13px auto 0;
   }
 }
 
@@ -177,13 +181,15 @@
 }
 
 .catalog__btn {
-  margin-bottom: 22px;
+  margin-bottom: 0;
+  position: relative;
+  top: -2px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__btn {
     width: 249px;
-    margin: 25px auto 14px;
+    margin: 27px auto;
 
     font-size: 16px;
   }

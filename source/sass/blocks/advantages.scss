@@ -149,7 +149,7 @@
     position: absolute;
     z-index: -1;
     top: 140px;
-    right: 95px;
+    left: 115px;
     content: counter(section);
 
     font-size: 281px;
@@ -171,13 +171,16 @@
     line-height: 24px;
     font-size: 16px;
   }
+
+  .advantages__description span {
+    display: block;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .advantages__item {
     width: 245px;
     min-height: 284px;
-    padding: 0 40px;
   }
 
   .advantages li:first-of-type {
@@ -185,7 +188,6 @@
   }
 
   .advantages__item::after {
-    top: auto;
-    right: 35px;
+    left: 47%;
   }
 }

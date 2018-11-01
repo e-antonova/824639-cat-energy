@@ -94,6 +94,7 @@
     width: 432px;
     margin-right: auto;
     margin-left: 10px;
+    margin-top: -7px;
 
     line-height: 24px;
     font-size: 16px;
@@ -200,6 +201,7 @@
 
   .example__conclusion span {
     display: block;
+    margin-top: 10px;
   }
 }
 
@@ -208,7 +210,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 370px;
+    width: 367px;
     margin-top: 35px;
     margin-left: 10px;
   }
@@ -225,15 +227,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 320px;
+    width: 327px;
     margin: 0;
-    padding: 43px 0 20px 5px;
+    padding: 43px 0 20px 0;
 
     text-align: left;
+  }
 
-    .example__conclusion span {
-      margin-top: 0;
-    }
+  .example__conclusion span {
+    margin-top: 0;
   }
 }
 
@@ -266,7 +268,7 @@
 
   .example__slider-toggles {
     position: absolute;
-    bottom: 205px;
+    bottom: 200px;
     z-index: 100;
 
     width: 571px;
@@ -276,7 +278,7 @@
 @media (min-width: $desktop-width) {
   .example__slider {
     @include wrapper;
-    width: 702px;
+    width: 698px;
     margin: -245px 0 0;
     height: auto;
   }
@@ -297,6 +299,7 @@
 
 @media (min-width: $tablet-width) {
   .example__slider-text {
+    padding-bottom: 5px;
     border-bottom: 1px dotted $border-grey;
 
     font-size: 20px;
@@ -481,7 +484,7 @@
 
 @media (min-width: $desktop-width) {
   .example__images {
-    background: linear-gradient(to right, $grey 53%, #eaeaea 51%);
+    background: linear-gradient(to right, $grey 53%, #eaeaea 54%);
   }
 
   .example__slider-img--before {
@@ -499,9 +502,8 @@
   }
 
   .example__slider-toggles {
-    right: 44px;
+    right: 41px;
 
-    margin-left: -46px;
-    bottom: 39px;
+    bottom: 31px;
   }
 }

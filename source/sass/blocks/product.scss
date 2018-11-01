@@ -9,16 +9,23 @@
 .product__description {
   display: flex;
   justify-content: space-between;
+  width: 140px;
 }
 
 .product__description-value {
   text-align: right;
+  padding: 0;
+}
+
+.product__description-field {
+  padding: 0;
 }
 
 @media (min-width: $tablet-width) {
   .product__description {
     padding-bottom: 6px;
     margin-bottom: 8px;
+    width: 100%;
 
     border-bottom: 1px solid $border-grey;
   }

@@ -69,15 +69,15 @@
             <ul class="personal-info__programs">
               <li class="personal-info__item">
                 <input class="personal-info__btn" type="radio" name="Программа" id="slim" value="Похудение"  tabindex="4" checked>
-                <label class="personal-info__label  personal-info__label--radio" for="slim"><span class="personal-info__name">Похудение</span></label>
+                <label class="personal-info__label  personal-info__label--radio  personal-info__name" for="slim">Похудение</label>
               </li>
               <li class="personal-info__item">
                 <input class="personal-info__btn" type="radio" name="Программа" id="grow" value="Набор массы"  tabindex="5">
-                <label class="personal-info__label  personal-info__label--radio" for="grow"><span class="personal-info__name">Набор массы</span></label>
+                <label class="personal-info__label  personal-info__label--radio  personal-info__name" for="grow">Набор массы</label>
               </li>
               <li class="personal-info__item">
                 <input class="personal-info__btn" type="radio" name="Программа" id="advice" value="Не знаю (Нужен ваш совет)"  tabindex="6">
-                <label class="personal-info__label  personal-info__label--radio" for="advice"><span class="personal-info__name">Не знаю (Нужен ваш совет)</span></label>
+                <label class="personal-info__label  personal-info__label--radio  personal-info__name" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </div>
@@ -85,14 +85,14 @@
             <h3 class="personal-info__title  personal-info__title--1">Контактные данные (владельца кота)</h3>
           </div>
           <div class="personal-info__wrapper  personal-info__wrapper-center2">
-            <div class="personal-info__row  personal-info__input--email">
+            <div class="personal-info__row  personal-info__row--email">
               <label class="personal-info__label" for="e-mail">E-mail:*</label>
               <input class="personal-info__input" type="email" name="E-mail" id="e-mail" placeholder="kuklachev@gmail.com"  tabindex="7" required>
               <svg class="personal-info__icon" width="18" height="20">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </div>
-            <div class="personal-info__row  personal-info__input--phone">
+            <div class="personal-info__row  personal-info__row--phone">
               <label class="personal-info__label" for="tel">Телефон:*</label>
               <input class="personal-info__input" type="tel" name="Телефон" id="tel" placeholder="8 (960) 900-60-90"  tabindex="8" required>
                 <svg class="personal-info__icon" width="20" height="20">
@@ -111,24 +111,24 @@
           <div class="personal-info__line">
             <h3 class="personal-info__title">Дополнительно</h3>
           </div>
-            <ul class="personal-info__programs  personal-info__programs--checkbox">
-              <li class="personal-info__item">
-                <input class="personal-info__checkbox" type="checkbox" name="sweetener" id="sweetener"  tabindex="10" checked>
-                <label class="personal-info__label  personal-info__label--checkbox" for="sweetener"><span class="personal-info__name">Сахарозаменитель</span></label>
-              </li>
-              <li class="personal-info__item">
-                <input class="personal-info__checkbox" type="checkbox" name="water" id="water"  tabindex="11">
-                <label class="personal-info__label  personal-info__label--checkbox" for="water"><span class="personal-info__name">Питьевая вода</span></label>
-              </li>
-              <li class="personal-info__item">
-                <input class="personal-info__checkbox" type="checkbox" name="milk" id="milk"  tabindex="12">
-                <label class="personal-info__label  personal-info__label--checkbox" for="milk"><span class="personal-info__name">Молоко</span></label>
-              </li>
-              <li class="personal-info__item">
-                <input class="personal-info__checkbox" type="checkbox" name="vitamins" id="vitamins"  tabindex="13">
-                <label class="personal-info__label  personal-info__label--checkbox" for="vitamins"><span class="personal-info__name">Витамины</span></label>
-              </li>
-            </ul>
+          <ul class="personal-info__programs  personal-info__programs--checkbox">
+            <li class="personal-info__item">
+              <input class="personal-info__checkbox" type="checkbox" name="sweetener" id="sweetener"  tabindex="10" checked>
+              <label class="personal-info__label  personal-info__label--checkbox  personal-info__name" for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="personal-info__item">
+              <input class="personal-info__checkbox" type="checkbox" name="water" id="water"  tabindex="11">
+              <label class="personal-info__label  personal-info__label--checkbox  personal-info__name" for="water">Питьевая вода</label>
+            </li>
+            <li class="personal-info__item">
+              <input class="personal-info__checkbox" type="checkbox" name="milk" id="milk"  tabindex="12">
+              <label class="personal-info__label  personal-info__label--checkbox  personal-info__name" for="milk">Молоко</label>
+            </li>
+            <li class="personal-info__item">
+              <input class="personal-info__checkbox" type="checkbox" name="vitamins" id="vitamins"  tabindex="13">
+              <label class="personal-info__label  personal-info__label--checkbox  personal-info__name" for="vitamins">Витамины</label>
+            </li>
+          </ul>
         </section>
         <div class="form-program__footer">
           <input class="form-program__btn  button" type="submit" value="Отправить заявку"  tabindex="14">
@@ -143,7 +143,7 @@
           <div class="contacts__card">
             <b class="contacts__title">Приглашаем<br>  к сотрудничеству  дилеров!</b>
             <p class="contacts__text">
-              ул. Большая Конюшенная, д. 19/8  Санкт-Петербург
+              ул. Большая Конюшенная, д. 19/8  <span>Санкт-Петербург</span>
             </p>
           </div>
         </div>
@@ -152,36 +152,37 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602" allowfullscreen=""></iframe>
       </div>
       <div class="page-footer__wrapper">
-        <div class="page-footer__wrapper--bottom">
+        <div class="page-footer__wrapper-bottom">
           <a class="page-footer__logo" href="index.html">
               <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
           </a>
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__link-vkontakte" width="19" height="19">
-                  <use xlink:href="#icon-vk-mobile"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__link-instagram" width="19" height="19">
-                  <use xlink:href="#icon-insta-mobile"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                  <svg class="social__link-facebook" width="19" height="19">
-                    <use xlink:href="#icon-fb-mobile"></use>
+          <div class="page-footer__wrapper-social">
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="#" title="Мы ВКонтакте">
+                  <svg class="social__link-vkontakte" width="19" height="19">
+                    <use xlink:href="#icon-vk-mobile"></use>
                   </svg>
-              </a>
-            </li>
-          </ul>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" title="Мы в Instagram">
+                  <svg class="social__link-instagram" width="19" height="19">
+                    <use xlink:href="#icon-insta-mobile"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" title="Мы в Facebook">
+                    <svg class="social__link-facebook" width="19" height="19">
+                      <use xlink:href="#icon-fb-mobile"></use>
+                    </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="page-footer__copyright  copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML Academy
               <svg class="copyright__logo-academy" width="40" height="40">
                 <use xlink:href="#icon-htmlacademy"></use>
               </svg>

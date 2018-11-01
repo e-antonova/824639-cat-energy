@@ -1,19 +1,28 @@
-.social {
+.page-footer__wrapper-social {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 62px;
 
-  @include reset-list;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
 
-@media (min-width: $tablet-width) {
-  .social {
-    width: 126px;
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 62px;
+  width: 130px;
 
+  @include reset-list;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper-social {
     border: 0;
+  }
+
+  .social {
+    width: 127px;
   }
 }
 
@@ -26,13 +35,12 @@
 
 @media (min-width: $tablet-width) {
   .social__item {
-    margin: 0;
+    margin-right: 30px;
   }
 }
 
 .social__link {
   display: inline-block;
-  padding: 15px;
 
   svg {
     fill: #666666;

@@ -1,5 +1,6 @@
 .personal-info__wrapper {
   @include wrapper;
+  margin-bottom: 24px;
 }
 
 @media (min-width: $tablet-width) {
@@ -27,8 +28,12 @@
 @media (min-width: $tablet-width) {
   .personal-info__row {
     padding-left: 40px;
-    min-width: 635px;
-    margin: 0 0 20px;
+    min-width: 632px;
+    margin: 0 0 18px;
+  }
+
+  .personal-info__wrapper-center2 {
+    margin-bottom: 63px;
   }
 }
 
@@ -36,7 +41,7 @@
   .personal-info__row {
     padding-left: 0;
     min-width: 570px;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
   }
 
   .personal-info__wrapper-center {
@@ -44,7 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 200px;
+    height: 197px;
   }
 
   .personal-info__wrapper-center2 {
@@ -55,10 +60,11 @@
     height: 80px;
     padding: 0;
     margin: 0 auto;
+    margin-bottom: 40px;
   }
 
-  .personal-info__input--email,
-  .personal-info__input--phone {
+  .personal-info__row--email,
+  .personal-info__row--phone {
     width: 570px;
   }
 }
@@ -71,13 +77,6 @@
   line-height: 18px;
   font-family: $oswald;
   text-transform: uppercase;
-}
-
-.personal-info__input::placeholder {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 18px;
-  font-family: $oswald;
 }
 
 .personal-info__input:invalid {
@@ -116,46 +115,58 @@
 }
 
 .personal-info__name {
-  display: block;
-  width: 235px;
-  padding-left: 45px;
-  margin: 6px 0;
-
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.personal-info__label--radio {
   position: relative;
 
   display: block;
-  width: 28px;
-  height: 28px;
-  margin-bottom: 12px;
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 
-  border-radius: 50%;
-  border: 1px solid #e6e6e6;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $oswald;
+  color: $black;
+  text-transform: uppercase;
 
   cursor: pointer;
+}
+
+.personal-info__name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #d9d9d9;
+
+  transform: translateY(-50%);
 }
 
 .personal-info__label--radio::before {
   content: "";
   position: absolute;
-  left: 30%;
-  top: 30%;
+  left: 10px;
+  top: 35%;
 
-  display: none;
   width: 12px;
   height: 12px;
+  margin-top: 0;
+  display: none;
 
   border-radius: 50%;
   border: none;
   background: $green;
 }
 
-.personal-info__label--radio:hover {
+.personal-info__label--radio::after {
+  border-radius: 50%;
+}
+
+.personal-info__name:hover::after {
   border: 1px solid #bbbbbb;
 }
 
@@ -182,7 +193,7 @@
   @include reset-list;
   display: block;
   min-width: 320px;
-  padding-top: 20px;
+  padding-top: 17px;
   padding-bottom: 8px;
   margin: 0 auto;
 
@@ -190,21 +201,30 @@
 }
 
 @media (min-width: $tablet-width) {
-  .personal-info__label--radio {
+  .personal-info__input {
+    height: 52px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: $oswald;
+  }
+
+  .personal-info__name::after {
     width: 40px;
     height: 40px;
   }
 
   .personal-info__label--radio::before {
-    left: 28%;
-    top: 28%;
+    left: 12px;
+    top: 29%;
 
     width: 18px;
     height: 18px;
   }
 
   .personal-info__name {
-    padding-left: 65px;
+    padding-left: 60px;
+    padding-top: 17px;
   }
 
   .personal-info__programs {
@@ -213,7 +233,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 633px;
-    margin: 70px 0 50px 70px;
+    margin: 73px 0 50px 70px;
+    padding-bottom: 17px;
   }
 
   .personal-info__label,
@@ -230,13 +251,19 @@
     display: flex;
     margin: 0;
     margin-left: 40px;
+    padding-top: 22px;
     width: 570px;
-    height: 167px;
+    height: 158px;
+  }
+
+  .personal-info__label--radio::before {
+    top: 31%;
   }
 }
 
 .personal-info__programs--checkbox {
   padding-top: 0;
+  margin-top: -7px;
 
   outline: none;
 }
@@ -252,7 +279,7 @@
 .personal-info__line::after {
   content: "";
   position: absolute;
-  top: 55%;
+  top: 29%;
   left: 0;
 
   display: block;
@@ -276,17 +303,22 @@
 
 .personal-info__title {
   @include form-title;
+  margin-top: 3px;
+  margin-bottom: 35px;
 }
 
 .personal-info__title--1 {
   width: 185px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+
   word-wrap: break-word;
 }
 
 .personal-info__line--1::after {
   content: "";
   position: absolute;
-  top: 40px;
+  top: 46px;
 
   display: block;
   width: 100%;
@@ -298,8 +330,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .personal-info__item {
+    padding-left: 28px;
+    margin-right: -36px;
+  }
+
+  .personal-info__item:last-child {
+    margin-right: 3px;
+  }
+
   .personal-info__title {
-    margin-bottom: 70px;
+    margin-bottom: 74px;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -311,31 +352,39 @@
     width: 512px;
   }
 
-  .personal-info__line--1::after {
-    top: 55px;
-  }
-
   .personal-info__line {
     padding: 0 30px;
   }
 
   .personal-info__line::after {
-    top: 39%;
+    top: 25%;
+  }
+
+  .personal-info__line--1::after {
+    top: 55px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .personal-info__title {
+    margin-bottom: 73px;
+  }
+
   .personal-info__title--1 {
-    width: 512px;
-    margin-top: 50px;
+    width: 520px;
+    margin-top: 70px;
   }
 
   .personal-info__line::after {
-    top: 45%;
+    top: 23%;
   }
 
   .personal-info__line {
     padding: 0;
+  }
+
+  .personal-info__line--1::after {
+    top: 92px;
   }
 }
 
@@ -345,12 +394,8 @@
   }
 }
 
-.personal-info__line--1 {
-  width: 100%;
-}
-
-.personal-info__input--email,
-.personal-info__input--phone {
+.personal-info__row--email,
+.personal-info__row--phone {
   position: relative;
 
   display: flex;
@@ -378,33 +423,25 @@
     margin-left: 40px;
     margin-bottom: 50px;
   }
+
+  .personal-info__wrapper--text {
+    margin-bottom: 13px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .personal-info__input--text {
     margin-left: 0;
+    padding-top: 16px;
     width: 1220px;
   }
 
   .personal-info__wrapper--text {
     justify-content: center;
-    margin-left: 0;
+    margin-left: 5px;
     width: 100%;
     padding: 0 40px;
   }
-}
-
-.personal-info__label--checkbox {
-  position: relative;
-
-  display: block;
-  width: 28px;
-  height: 28px;
-  margin-bottom: 12px;
-
-  border: 1px solid #e6e6e6;
-
-  cursor: pointer;
 }
 
 .personal-info__label--checkbox::before {
@@ -424,10 +461,6 @@
   transform: translateY(-50%) rotate(45deg);
 }
 
-.personal-info__label--checkbox:hover {
-  border: 1px solid #bbbbbb;
-}
-
 .personal-info__label--checkbox:active {
   opacity: 0.3;
 }
@@ -435,17 +468,14 @@
 @media (min-width: $tablet-width) {
   .personal-info__programs--checkbox {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 680px;
-    height: 110px;
-    margin-left: 50px;
-    margin-top: 22px;
-  }
-
-  .personal-info__label--checkbox {
-    width: 40px;
-    height: 40px;
+    margin-left: 40px;
+    width: 540px;
+    height: 142px;
+    margin-top: -23px;
+    margin-bottom: 0;
   }
 
   .personal-info__label--checkbox::before {
@@ -455,18 +485,21 @@
 
 @media (min-width: $desktop-width) {
   .personal-info__programs--checkbox {
-    @include wrapper;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1300px;
+    width: 1220px;
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 22px;
+    margin-bottom: 4px;
+    margin-top: -19px;
+    padding: 0;
   }
 
   .personal-info__programs--checkbox > .personal-info__item {
     padding-left: 0;
+    margin-right: 0;
+    width: 20%;
   }
 }

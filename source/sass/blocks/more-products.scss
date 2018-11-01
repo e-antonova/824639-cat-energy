@@ -1,6 +1,9 @@
 .more-products {
   position: relative;
 
+  min-height: 182px;
+  margin-bottom: 26px;
+
   text-align: center;
   border-bottom: 1px solid #ededed;
 }
@@ -8,7 +11,7 @@
 .more-products::after {
   content: "";
   position: absolute;
-  top: 39px;
+  top: 24px;
   left: 0;
   right: 0;
 
@@ -26,7 +29,8 @@
 @media (min-width: $tablet-width) {
   .more-products {
     margin-top: auto;
-    min-height: 430px;
+    margin-bottom: 0;
+    min-height: 420px;
 
     background: none;
     border: 1px solid #f2f2f2;
@@ -57,11 +61,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin: 0 auto;
 }
 
 .more-products__title {
   margin: 0;
-  padding-top: 92px;
+  margin-top: 78px;
 
   font-weight: 400;
   font-size: 16px;
@@ -72,14 +78,15 @@
 
 @media (min-width: $tablet-width) {
   .more-products__text {
-    padding-top: 50px;
+    margin-top: auto;
+    margin-bottom: 45px;
   }
 
   .more-products__title {
-    margin: 109px auto auto;
     max-width: 140px;
     width: 100%;
     padding-top: 0;
+    margin-bottom: 15px;
 
     font-size: 20px;
     line-height: 20px;
@@ -89,11 +96,15 @@
 @media (min-width: $desktop-width) {
   .more-products__text {
     padding-top: 0;
-    margin: 25px auto;
+    margin-bottom: 46px;
   }
 }
 
 .more-products__description {
+  margin: 0;
+  margin-top: -3px;
+  margin-bottom: 22px;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -105,7 +116,6 @@
   .more-products__description {
     max-width: 180px;
     width: 100%;
-    margin: 27px auto 85px;
 
     line-height: 20px;
     font-size: 16px;
@@ -134,13 +144,19 @@
 @media (min-width: $tablet-width) {
   .button--show-more {
     width: 249px;
-    margin: 19px auto 20px;
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 27px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .button--show-more {
     width: 169px;
-    margin: 19px auto 20px;
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 37px;
   }
 }
