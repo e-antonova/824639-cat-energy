@@ -54,6 +54,10 @@
   z-index: 100;
   margin-top: 303px;
   margin-bottom: 21px;
+
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px;
 }
 
 @media (min-width: $tablet-width) {
@@ -105,15 +109,19 @@
     width: 245px;
     height: 53px;
     margin: 50px 0 0 90px;
-    padding: 6px;
+    padding: 17px;
 
     font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .preview,
-  .preview__wrapper {
+  .preview {
+    position: relative;
+
+    min-height: 569px;
+    justify-content: flex-start;
+    width: 100%;
     display: flex;
     margin: 0 auto;
   }
@@ -123,14 +131,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 1220px;
-  }
-
-  .preview {
-    position: relative;
-
-    min-height: 569px;
-    justify-content: flex-start;
-    width: 100%;
+    margin: 0 auto;
   }
 
   .preview__intro {

@@ -1,6 +1,6 @@
 .personal-info__wrapper {
   @include wrapper;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
@@ -22,18 +22,18 @@
 
 .personal-info__row {
   display: flex;
-  margin: 14px 0;
+  margin: 12px 0;
 }
 
 @media (min-width: $tablet-width) {
   .personal-info__row {
     padding-left: 40px;
     min-width: 632px;
-    margin: 0 0 18px;
+    margin: 0 0 21px;
   }
 
   .personal-info__wrapper-center2 {
-    margin-bottom: 63px;
+    margin-bottom: 67px;
   }
 }
 
@@ -63,7 +63,10 @@
     margin-bottom: 40px;
   }
 
-  .personal-info__row--email,
+  .personal-info__row--email {
+    width: 570px;
+  }
+
   .personal-info__row--phone {
     width: 570px;
   }
@@ -72,11 +75,17 @@
 .personal-info__label {
   align-self: center;
   margin-right: 15px;
+  flex-shrink: 1;
 
   font-size: 16px;
   line-height: 18px;
   font-family: $oswald;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.personal-info__wrapper-center2 .personal-info__label {
+  margin-right: 10px;
 }
 
 .personal-info__input:invalid {
@@ -177,22 +186,20 @@
 .personal-info__input {
   flex-grow: 1;
   padding: 13px;
-  height: 45px;
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 18px;
   font-family: $oswald;
 
   color: $darkgrey;
 
   border: 1px solid $border-grey;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .personal-info__programs {
   @include reset-list;
   display: block;
-  min-width: 320px;
+  min-width: 280px;
   padding-top: 17px;
   padding-bottom: 8px;
   margin: 0 auto;
@@ -202,10 +209,12 @@
 
 @media (min-width: $tablet-width) {
   .personal-info__input {
-    height: 52px;
+    font-size: 20px;
+    white-space: nowrap;
+    padding: 13px;
+    padding-left: 15px;
+
     text-transform: uppercase;
-    font-size: 16px;
-    line-height: 18px;
     font-family: $oswald;
   }
 
@@ -224,7 +233,11 @@
 
   .personal-info__name {
     padding-left: 60px;
-    padding-top: 17px;
+    padding-top: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+    white-space: nowrap;
   }
 
   .personal-info__programs {
@@ -233,16 +246,25 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 633px;
-    margin: 73px 0 50px 70px;
-    padding-bottom: 17px;
+    margin: 79px 0 78px 69px;
+    padding-bottom: 20px;
   }
 
-  .personal-info__label,
-  .personal-info__input,
-  .personal-info__input::placeholder,
-  .personal-info__name {
+  .personal-info__label {
+    margin-right: 20px;
+
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .personal-info__wrapper-center2 .personal-info__label {
+    margin-right: 20px;
+  }
+
+  .personal-info__input::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+    white-space: nowrap;
   }
 }
 
@@ -274,37 +296,29 @@
 
 .personal-info__line {
   position: relative;
+
+  max-width: 100%;
 }
 
 .personal-info__line::after {
   content: "";
   position: absolute;
   top: 29%;
-  left: 0;
+  left: 50%;
 
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 3px;
 
   background: $green;
 
-  transform: translateY(-50%);
-}
-
-@media (min-width: $desktop-width) {
-  .personal-info__line {
-    padding: 0 70px;
-  }
-
-  .personal-info__line::after {
-    top: 39px;
-  }
+  transform: translate(-50%, -50%);
 }
 
 .personal-info__title {
   @include form-title;
   margin-top: 3px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 
 .personal-info__title--1 {
@@ -319,30 +333,28 @@
   content: "";
   position: absolute;
   top: 46px;
+  left: 50%;
 
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 3px;
 
   background: $green;
 
-  transform: translateY(-50%);
+  transform: translate(-50%, 50%);
 }
 
 @media (min-width: $tablet-width) {
   .personal-info__item {
     padding-left: 28px;
     margin-right: -36px;
-  }
-
-  .personal-info__item:last-child {
-    margin-right: 3px;
+    width: 46%;
   }
 
   .personal-info__title {
-    margin-bottom: 74px;
     padding-left: 40px;
     padding-right: 40px;
+    margin: 0;
 
     font-size: 36px;
     line-height: 36px;
@@ -350,18 +362,24 @@
 
   .personal-info__title--1 {
     width: 512px;
+    margin: 0;
   }
 
   .personal-info__line {
     padding: 0 30px;
+    margin-bottom: 71px;
   }
 
   .personal-info__line::after {
-    top: 25%;
+    top: 50%;
+  }
+
+  .personal-info__line--1 {
+    margin-bottom: 74px;
   }
 
   .personal-info__line--1::after {
-    top: 55px;
+    top: 50%;
   }
 }
 
@@ -379,18 +397,14 @@
     top: 23%;
   }
 
-  .personal-info__line {
-    padding: 0;
-  }
-
   .personal-info__line--1::after {
     top: 92px;
   }
-}
 
-@media (min-width: 1440px) {
   .personal-info__line {
-    padding: 0 70px;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0;
   }
 }
 
@@ -422,10 +436,11 @@
     height: 173px;
     margin-left: 40px;
     margin-bottom: 50px;
+    padding: 18px;
   }
 
   .personal-info__wrapper--text {
-    margin-bottom: 13px;
+    margin-bottom: 19px;
   }
 }
 
@@ -438,9 +453,8 @@
 
   .personal-info__wrapper--text {
     justify-content: center;
-    margin-left: 5px;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 0 3px 17px;
   }
 }
 
@@ -469,10 +483,10 @@
   .personal-info__programs--checkbox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-left: 40px;
-    width: 540px;
+    width: 100%;
     height: 142px;
     margin-top: -23px;
     margin-bottom: 0;
@@ -492,9 +506,9 @@
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4px;
+    margin-bottom: 0;
     margin-top: -19px;
-    padding: 0;
+    padding: 0 40px;
   }
 
   .personal-info__programs--checkbox > .personal-info__item {

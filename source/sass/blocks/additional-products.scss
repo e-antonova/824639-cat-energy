@@ -23,15 +23,15 @@
   content: "";
   position: absolute;
   top: 30%;
-  left: 0;
+  left: 50%;
 
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 3px;
 
   background: $green;
 
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: $tablet-width) {
@@ -46,13 +46,9 @@
 
 @media (min-width: $desktop-width) {
   .additional-products__line {
+    margin: 0 auto;
+    max-width: 1300px;
     padding: 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .additional-products__line {
-    padding: 0 70px;
   }
 }
 
